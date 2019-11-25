@@ -3,7 +3,8 @@ WORKDIR $HOME/app
 COPY package.json .
 RUN npm install
 COPY . .
-CMD ["npm", "run", "start"]
+#CMD ["npm", "run", "start"]
+RUN npm run build
 
 #docker build -f Dockerfile.dev .
 #docker run -p 3000:3000 ffa75193606a
