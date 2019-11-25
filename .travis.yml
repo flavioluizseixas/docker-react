@@ -9,13 +9,8 @@ script:
   - docker run -e CI=true flavioseixas/docker-react npm run test
 
 deploy:
-  provider: elasticbeanstalk
-  region: "us-east-2"
-  app: "docker"
-  env: "Docker-env"
-  bucket_name: "elasticbeanstalk-us-east-2-470678855296"
-  bucket_path: "docker"
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
   on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+    branch: gh-pages

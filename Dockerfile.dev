@@ -7,5 +7,4 @@ CMD ["npm", "run", "start"]
 
 #docker build -f Dockerfile.dev .
 #docker run -p 3000:3000 ffa75193606a
-
 #docker exec -it <<id>> npm run test
